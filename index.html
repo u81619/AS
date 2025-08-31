@@ -63,6 +63,15 @@
         to {transform: translateY(0); opacity: 1;}
     }
 
+    /* صورة الشعار */
+    .school-logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
     .logo {
         font-size: 3.5em;
         font-weight: bold;
@@ -139,6 +148,9 @@
 <button class="lang-toggle" onclick="toggleLanguage()">English</button>
 
 <div class="header">
+    <!-- صورة الشعار -->
+    <img src="logo.jpg" alt="شعار " class="school-logo">
+
     <div class="logo">
         <span class="four lang-ar">ثانوية متفوقين بسماية للبنين</span>
         <span class="four lang-en">Al-Mutafawiqin High School for Boys in Bismayah</span>
@@ -211,3 +223,5 @@ function toggleLanguage() {
     }
 }
 </script>
+</body>
+</html>
