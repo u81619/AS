@@ -200,7 +200,7 @@ function toggleLanguage() {
         langToggleBtn.textContent = 'العربية';
         elementsAr.forEach(el => el.style.display = 'none');
         elementsEn.forEach(el => {
-            el.style.display = el.tagName === 'A' ? 'inline-block' : 'block';
+            el.style.display = (el.tagName === 'A' || el.tagName === 'BUTTON') ? 'inline-block' : 'block';
         });
     } else {
         html.lang = 'ar';
@@ -208,4 +208,8 @@ function toggleLanguage() {
         langToggleBtn.textContent = 'English';
         elementsEn.forEach(el => el.style.display = 'none');
         elementsAr.forEach(el => {
-            el.style.display = el.tagName === 'A
+            el.style.display = (el.tagName === 'A' || el.tagName === 'BUTTON') ? 'inline-block' : 'block';
+        });
+    }
+}
+</script>
