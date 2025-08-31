@@ -4,10 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ثانوية متفوقين بسماية للبنين</title>
+
+<!-- خط Cario من Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
-    /* خلفية داكنة مع إضاءة RGB */
     body {
-        font-family: 'Tahoma', sans-serif;
+        font-family: 'Cairo', sans-serif;
         margin: 0;
         padding: 0;
         background: #0a0a0a;
@@ -16,7 +19,7 @@
         overflow-x: hidden;
         position: relative;
     }
-    /* طبقة إضاءة متحركة */
+
     body::before {
         content: "";
         position: fixed;
@@ -30,13 +33,13 @@
         opacity: 0.15;
         z-index: -1;
     }
+
     @keyframes bgAnimation {
         0% {background-position: 0% 50%;}
         50% {background-position: 100% 50%;}
         100% {background-position: 0% 50%;}
     }
 
-    /* حاوية المحتوى */
     .container {
         width: 90%;
         max-width: 1200px;
@@ -44,25 +47,28 @@
         padding: 20px;
         animation: fadeIn 1s ease;
     }
+
     @keyframes fadeIn {
         from {opacity: 0; transform: translateY(20px);}
         to {opacity: 1; transform: translateY(0);}
     }
 
-    /* الرأس */
     .header {
         text-align: center;
         padding: 20px 0;
         animation: slideDown 1s ease;
     }
+
     @keyframes slideDown {
         from {transform: translateY(-50px); opacity: 0;}
         to {transform: translateY(0); opacity: 1;}
     }
+
     .logo {
         font-size: 3.5em;
         font-weight: bold;
     }
+
     .logo .four {
         background: linear-gradient(90deg, #ff00ff, #00ffff, #00ff00, #ffff00, #ff0000);
         -webkit-background-clip: text;
@@ -70,15 +76,16 @@
         animation: rgbText 5s linear infinite;
         background-size: 400%;
     }
+
     @keyframes rgbText {
         0% {background-position: 0%;}
         100% {background-position: 400%;}
     }
+
     .logo .gamer {
         color: #fff;
     }
 
-    /* زر تغيير اللغة */
     .lang-toggle {
         position: fixed;
         top: 15px;
@@ -93,16 +100,17 @@
         transition: all 0.3s ease;
         z-index: 999;
     }
+
     .lang-toggle:hover {
         background: rgba(255,255,255,0.15);
         transform: scale(1.05);
     }
 
-    /* أزرار الـ RGB */
     .nav-buttons {
         text-align: center;
         margin: 40px 0;
     }
+
     .nav-buttons .button {
         display: inline-block;
         padding: 15px 35px;
@@ -118,45 +126,36 @@
         box-shadow: 0 0 20px rgba(255,255,255,0.2);
         transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
+
     .nav-buttons .button:hover {
         transform: translateY(-4px) scale(1.05);
         box-shadow: 0 0 30px rgba(255,255,255,0.6);
     }
+
     @keyframes rgbButton {
         0% {background-position: 0%;}
         100% {background-position: 400%;}
     }
 
-    /* روابط القنوات */
     .channel-links {
         background: rgba(255,255,255,0.05);
         border-radius: 15px;
         padding: 25px;
         text-align: center;
         box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        margin-bottom: 30px;
     }
+
     .channel-links h2 {
         margin-bottom: 20px;
         font-size: 1.8em;
     }
-    .channel-links ul {
-        list-style: none;
-        padding: 0;
-    }
-    .channel-links ul li {
-        margin: 10px 0;
-    }
-    .channel-links ul li a {
-        color: #fff;
-        font-size: 1.2em;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    .channel-links ul li a:hover {
-        color: #ff0;
+
+    .channel-links p {
+        font-size: 1.1em;
+        text-align: justify;
     }
 
-    /* الفوتر */
     footer {
         margin-top: 40px;
         padding: 20px;
@@ -165,7 +164,6 @@
         font-size: 0.95em;
     }
 
-    /* اللغة */
     .lang-en { display: none; }
 </style>
 </head>
@@ -191,50 +189,36 @@
     </div>
 
     <div class="channel-links">
-        <h2 class="lang-ar">روابط قنوات 4GAMER</h2>
-        <h2 class="lang-en">4GAMER Channel Links</h2>
-        <ul>
-            <li><a href="https://t.me/C9_9M" target="_blank"><span class="lang-ar">القناة الأساسية</span><span class="lang-en">Main Channel</span></a></li>
-            <li><a href="https://t.me/C9_9D" target="_blank"><span class="lang-ar">القناة الاحتياطية</span><span class="lang-en">Backup Channel</span></a></li>
-            <li><a href="https://t.me/G_4MER" target="_blank"><span class="lang-ar">قناة الثيمات والصور (PS4)</span><span class="lang-en">Themes and Avatars Channel (PS4)</span></a></li>
-            <li><a href="https://t.me/mediaspac" target="_blank"><span class="lang-ar">قناة أجهزة PS5</span><span class="lang-en">PS5 Devices Channel</span></a></li>
-            <li><a href="https://t.me/G3_PS" target="_blank"><span class="lang-ar">قناة أجهزة PS3</span><span class="lang-en">PS3 Devices Channel</span></a></li>
-        </ul>
+        <h2 class="lang-ar">عن المدرسة</h2>
+        <h2 class="lang-en">About the School</h2>
+        <p class="lang-ar">
+            ثانوية متفوقين بسماية للبنين هي مؤسسة تربوية نموذجية تُعنى برعاية الطلبة المتفوقين وتطوير مهاراتهم العلمية والقيادية. تقع في مدينة بسماية الحديثة وتوفر بيئة تعليمية متقدمة تعتمد على مناهج علمية حديثة وكادر تدريسي كفوء.
+        </p>
+        <p class="lang-en">
+            Al-Mutafawiqin High School for Boys in Bismayah is a model educational institution dedicated to nurturing outstanding students and developing their academic and leadership skills. It is located in the modern city of Bismayah and provides an advanced learning environment with modern curricula and a qualified teaching staff.
+        </p>
     </div>
-</div>
 
-<footer>
-    <p class="lang-ar">&copy; 2025 جميع الحقوق محفوظة لـ 4GAMER.</p>
-    <p class="lang-en">&copy; 2025 All rights reserved for 4GAMER.</p>
-</footer>
+    <div class="channel-links">
+        <h2 class="lang-ar">رؤية المدرسة</h2>
+        <h2 class="lang-en">School Vision</h2>
+        <p class="lang-ar">
+            تسعى المدرسة إلى إعداد جيل من القادة الشباب يمتلكون المهارات والمعرفة اللازمة لبناء مجتمع متطور ومبدع.
+        </p>
+        <p class="lang-en">
+            The school aspires to prepare a generation of young leaders equipped with the skills and knowledge necessary to build an advanced and creative society.
+        </p>
+    </div>
 
-<script>
-function toggleLanguage() {
-    const html = document.documentElement;
-    const currentLang = html.lang;
-    const langToggleBtn = document.querySelector('.lang-toggle');
+    <div class="channel-links">
+        <h2 class="lang-ar">الأنشطة والفعاليات</h2>
+        <h2 class="lang-en">Activities & Events</h2>
+        <p class="lang-ar">
+            تقيم المدرسة مجموعة متنوعة من الأنشطة اللامنهجية مثل المعارض العلمية، والمنافسات الثقافية، والرحلات التعليمية التي تسهم في صقل شخصية الطالب.
+        </p>
+        <p class="lang-en">
+            The school organizes a variety of extracurricular activities such as science fairs, cultural competitions, and educational trips that help shape the students’ character.
+        </p>
+    </div>
 
-    const elementsAr = document.querySelectorAll('.lang-ar');
-    const elementsEn = document.querySelectorAll('.lang-en');
-
-    if (currentLang === 'ar') {
-        html.lang = 'en';
-        html.dir = 'ltr';
-        langToggleBtn.textContent = 'العربية';
-        elementsAr.forEach(el => el.style.display = 'none');
-        elementsEn.forEach(el => el.style.display = el.tagName === 'A' ? 'inline-block' : 'block');
-    } else {
-        html.lang = 'ar';
-        html.dir = 'rtl';
-        langToggleBtn.textContent = 'English';
-        elementsAr.forEach(el => el.style.display = el.tagName === 'A' ? 'inline-block' : 'block');
-        elementsEn.forEach(el => el.style.display = 'none');
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
-});
-</script>
-</body>
-</html>
+    <div class="channel-links">
